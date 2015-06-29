@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div ng-app="spinningWheelApp" ng-controller="editJSONController">
+    <input id="hdnData" type="hidden" value="@ViewBag.JSON" />
+    <br />
+    <button id="btnToggleAll" ng-click="toggleAll()">{{ btnToggleAllValue }}</button>
+    <div id="lstJSONData" dynamic="ideasListHTML"></div>
+    <br />
+    <button id="btnEditAllVals" ng-click="editAllVals()">Edit Items</button>
+    <button id="btnSaveAllVals" ng-click="saveAllVals()" style="display:none;">Save Items</button>
+</div>
+
+<script>
+    EditIdeas.LoadAngularModule();
+</script>

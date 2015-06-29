@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div ng-app="spinningWheelApp" ng-controller="ideasController">
+    <input id="hdnData" type="hidden" value="@ViewBag.JSON" />
+    Spinning Wheel
+    <br />
+    <canvas id="cvsWheel"></canvas>
+
+    <input id="btnSpin" type="button" ng-click="spinWheeel()" value="Spin" />
+    <input id="btnReSpin" type="button" ng-click="resetWheel()" value="ReSpin" style="display:none;" />
+    <br />
+    <label id="lblWheelSelection"></label>
+    <br />
+    <label id="lblLoading"></label>
+</div>
+
+<script>
+    WheelFunctions.LoadAngularModule();
+</script>
